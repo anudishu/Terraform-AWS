@@ -1,7 +1,7 @@
 
 provider "aws" {
-  region = "us-west-2"
-  profile = "production"
+  region = "us-west-1"
+  
 }
 
 
@@ -15,7 +15,7 @@ variable "ami_id_map" {
 
 
 resource "aws_instance" "example" {
-  ami           = lookup(var.ami_id_map, "us-west-2", "ami-1234567890")  # Use AMI ID from map, or default to "ami-1234567890"
+  ami           = lookup(var.ami_id_map, "us-west-2", "ami-0c55b159cbfafe1f0")  # Use AMI ID from map, or default to "ami-1234567890"
   instance_type = "t2.micro"
   #key_name      = "mykeypair"
 
