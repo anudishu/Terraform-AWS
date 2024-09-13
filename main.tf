@@ -20,6 +20,6 @@ resource "aws_instance" "example" {
   #key_name      = "mykeypair"
 
   tags = {
-    Name = "example-instance"
+    Name = "example-instance11"
   }
 }
